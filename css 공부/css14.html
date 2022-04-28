@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box sizing</title>
+    <style>
+        * {
+            margin: 10px;
+            /* 안쪽 테두리의 width값이 적용된다. 따라서 두개의 width값이 다르게 보인다 */
+            width: 150px;
+            /* 이를 보완하기 위해서 테두리의 경계가 동일하게 설정 */
+            box-sizing: border-box;
+        }
+
+        #small {
+            border: 10px solid black;
+        }
+
+        #large {
+            border: 30px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="small">hello</div>
+    <div id="large">hello</div>
+</body>
+</html>

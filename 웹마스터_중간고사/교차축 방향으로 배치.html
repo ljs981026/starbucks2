@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주축 방향으로 다양하게 플렉스 아이템 배치</title>
+  <style>
+    #wrap {
+      display: flex;
+      width: 90%;
+      align-items: center;
+      height: 500px;
+      margin: 0 auto;
+      border: 4px solid #000
+    }
+
+    #wrap div {
+      width: 33.33%;
+      height: 200px;
+    }
+
+    #wrap div:first-child {
+      background-color: #eb4a24;
+      height: 120px;
+    }
+
+    
+    #wrap div:nth-child(2) {
+      background-color: #1488c8;
+      height: 180px;
+    }
+
+    
+    #wrap div:last-child {
+      background-color: #f7e041;
+      height: 80px;
+    }
+
+    #box {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #item {
+      margin: 0 40px 0;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    const wrap = document.querySelectorAll('#wrap');
+    const btn1 = document.querySelector('.item1');
+    function alignItems1() {
+      document.getElementById("wrap").style.alignItems="stretch";
+    }
+    function alignItems2() {
+      document.getElementById("wrap").style.alignItems="flex-start";
+    }
+    function alignItems3() {
+      document.getElementById("wrap").style.alignItems="flex-end";
+    }
+    function alignItems4() {
+      document.getElementById("wrap").style.alignItems="center";
+    }
+    function alignItems5() {
+      document.getElementById("wrap").style.alignItems="baseline";
+    }
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div></div><div></div><div></div>
+  </div>
+  <div id="box">
+    <button class="item1" id="item" onclick="alignItems1()">stretch</button>
+    <button class="item2" id="item" onclick="alignItems2()">flex-start</button>
+    <button class="item3" id="item" onclick="alignItems3()">flex-end</button>
+    <button class="item4" id="item" onclick="alignItems4()">center</button>
+    <button class="item5" id="item" onclick="alignItems5()">baseline</button>
+  </div>
+  
+</body>
+</html>

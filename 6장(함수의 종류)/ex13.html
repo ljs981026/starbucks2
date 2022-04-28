@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(n1, n2, callback){
+            var temp = n1 + n2;
+            callback(temp);
+            document.write("add함수" + temp + "<br>");
+        }
+        function result(value){
+            document.write("result()함수 결과 : " + value + "<br>");
+        }
+        add(50, 100, result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transition: 1s;
+}
+/* 가상클래스 선택자 hover 마우스 커서가 올라가 있는 동안 선택 */
+.box:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+/* active 마우스를 클릭하고 있는 동안 선택 */
+.box:active {
+  background-color: green;
+}
+
+/* focus input, a, button, label, select 등 여러요소에 적용 */
+input:focus, .box:focus {
+  background-color: yellow;
+}
+
+/* first-child 형제 요소 중 첫째 선택 */
+.fruits span:first-child {
+  color: red;
+}
+
+/* last-child 형제 요소 중 막내 선택 */
+.fruits h3:last-child {
+  color: red;
+}
+
+/* nth-child(i) 형제 요소 중 i째라면 선택 */
+.fruits *:nth-child(2) {
+  color: aqua;
+}
+/* n은 0,1,2,3 ... 따라서 2n은 2의 배수가 된다. 홀수: 2n+1 */
+.fruits *:nth-child(2n) {
+  color: green;
+}
+
+/* 부정 선택자: 선택자 a가 아닌 b요소 선택 */
+.fruits *:not(span) {
+  color: purple;
+}
+
+/* before 선택자: 선택자 요소의 내부 앞에 내용을 삽입 */
+.box2::before {
+  content: "앞!";
+}
+
+/* after 선택자: 선택자 요소의 내부 뒤에 내용을 삽입 */
+.box3::after {
+  content: "뒤!";
+}
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.box4::before {
+  content: "Before";
+}
+
+.box4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+
+/* 속성 선택자 속성abc를 포함한 요소 선택 */
+[type] {
+  color: red;
+  background-color: orange;
+}
+
+/* attr=value 속성 abc를 포함하고 값이 xyz인 요소 선택 */
+[type="password"] {
+  color: blue;
+}
+
+[type="text"] {
+  color: gray;
+}
+
+[data-fruit-name] {
+  color: red;
+}
+
+.animal {
+  color: red;
+}
+
+/* 상속되는 css 속성들 
+  font-style: 글자 기울기 
+  font-weight: 글자 두께
+  font-size: 글자 크기
+  line-height: 줄 높이
+  font-family: 폰트, 글씨체
+  color: 글자 색상
+  text-align: 정렬 */
+
+/* 강제 상속 */
+.parent {
+  width: 300px;
+  height: 400px;
+  background-color: orange;
+}
+
+.child {
+  width: 100px;
+  /* 부모의 높이값을 상속받음 */
+  height: inherit;
+  background-color: red;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}

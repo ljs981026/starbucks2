@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      display: flex;
+      flex-flow: row wrap;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    #wrap .header {
+      width: 100%;
+      display: flex;
+      order: 1;
+      position: relative;
+      justify-content: flex-end;
+    }
+
+    #wrap .header h1 {
+      background-color: tomato;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12.5%;
+      height: 142px;
+    }
+
+    #wrap .header nav {
+      background-color: tomato;
+      width: 87.5%;
+      min-height: 80px;
+    }
+
+    #wrap .first {
+      order: 2;
+      width: 50%;
+      background-color: royalblue;
+    }
+
+    .second {
+      width: 27.08333333333333333333333%;
+      order: 3;
+      height: 440px;
+      background-color: yellow;
+    }
+
+    .third {
+      order: 4;
+      width: 22.91666666666666666666667%;
+      background-color: aqua;
+    }
+
+    .fouth {
+      order: 5;
+      width: 25%;
+      background-color: gray;
+    }
+
+    .fifth {
+      order: 6;
+      width: 25%;
+      background-color: brown;
+    }
+
+    .six {
+      display: flex;
+      order: 7;
+      flex-flow: column nowrap;
+      width: 25%;
+    }
+
+    .six div {
+      flex: 1 1 0;
+    }
+
+    .six .six-01 {
+      background-color: skyblue;
+    }
+
+    .six .six-02 {
+      background-color: blue;
+    }
+
+    .seven {
+      order: 8;
+      width: 25%;
+      height: 270px;
+      background-color: pink;
+    }
+
+    .footer {
+      order: 9;
+      width: 100%;
+      height: 94px;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="header">
+      <h1></h1>
+      <nav></nav>
+    </header>
+    <section class="first"></section>
+    <section class="second"></section>
+    <section class="third"></section>
+    <section class="fouth"></section>
+    <section class="fifth"></section>
+    <section class="six">
+      <div class="six-01"></div>
+      <div class="six-02"></div>
+    </section>
+    <section class="seven"></section>
+    <footer class="footer"></footer>
+  </div>
+</body>
+</html>

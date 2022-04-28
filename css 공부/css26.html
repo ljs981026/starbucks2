@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        img {
+            width: 300px;
+            float: right;
+            margin: 20px;
+        }
+
+        p {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- float는 본문에 이미지를 삽입할때 사용 -->
+    <img src="img/korea.png" alt="">
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ducimus ad aspernatur nulla ipsum accusantium minima itaque quibusdam ipsa voluptate quisquam et, veniam sequi nam in voluptates sed, expedita alias.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, eligendi eius ullam quaerat officiis, reiciendis similique perferendis ea odio quam blanditiis recusandae repellendus cupiditate fugiat deleniti, inventore atque laudantium ducimus.
+    </p>
+    <!-- float속성에 따라 설정 가능 이미지 float가 right라서 right만 가능 -->
+    <p style="clear: right;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ducimus ad aspernatur nulla ipsum accusantium minima itaque quibusdam ipsa voluptate quisquam et, veniam sequi nam in voluptates sed, expedita alias.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, eligendi eius ullam quaerat officiis, reiciendis similique perferendis ea odio quam blanditiis recusandae repellendus cupiditate fugiat deleniti, inventore atque laudantium ducimus.
+    </p>
+</body>
+</html>

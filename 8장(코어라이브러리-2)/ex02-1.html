@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #print {
+            width: 400px;
+            height: 300px;
+            border: 2px solid red;
+            line-height: 150px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var $print = $("#print");
+            var str = window.prompt("문자열을 입력해주세요.");
+            var index = 0;
+            var timerID = setInterval(function(){
+                var ch = str.charAt(index);
+                $print.html(ch);
+                index++;
+
+                if(index > str.length) {
+                    clearInterval(timerID);
+                    alert("출력완료");
+                }
+            }, 1000);
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="print">
+    </div>
+</body>
+</html>

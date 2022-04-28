@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #border {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      margin: 20px;
+      /* 모서리를 둥글게 */
+      /* border-radius: 10px;
+      border-radius: 0 10px 0 0;
+    } */ 
+
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    .item:first-child {
+      border: 4px solid red;
+      padding:  20px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="border"></div> -->
+  <!-- box-sizing: 요소의 크기 계산 기준을 지정
+        content-box: 요소의 내용으로 크기 계산
+        border-box: 요소의 내용 + padding + border로 크기 계산 -->
+  <div class="item">hello</div>
+  <div class="item">hello</div>
+</body>
+</html>

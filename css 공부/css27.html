@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float를 이용한 holy gray layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 560px;
+            border: 1px solid gray;
+            margin: auto;
+        }
+        header {
+            border-bottom: 1px solid gray;
+        }
+
+        nav {
+            float: left;
+            width: 120px;
+            border-right: 1px solid gray;
+        }
+
+        article {
+            float: left;
+            width: 300px;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            margin-left: -1px;
+        }
+
+        aside {
+            float: left;
+            width: 120px;
+            border-left: 1px solid gray;
+            margin-left: -1px;
+        }
+        
+        footer {
+            clear: both;
+            border-top: 1px solid gray;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>position</li>
+                <li>float</li>
+                <li>flex</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>float</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quaerat numquam eligendi dolorum voluptates. Aperiam nisi sequi placeat exercitationem sapiente quam iure delectus eos nihil earum. Odit iure delectus ipsa?
+            Numquam rationOdit eaque, consequuntur itaque ex dolor eligendi, in minus deleniti dolore repellendus architecto voluptatibus. Error magni quo dolores. Voluptatum fugit nostrum assumenda sed sapiente? Ad, inventore magnam? Facilis, neque omnis.
+        </article>
+        <aside>
+            ad
+        </aside>
+        <footer>
+            copyleft
+        </footer>
+    </div>
+</body>
+</html>

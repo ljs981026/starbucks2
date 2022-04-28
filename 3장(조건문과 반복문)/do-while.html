@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(while)</title>
+</head>
+<body>
+    <script>
+        //1에서부터 100까지의 합계
+        var sum = 0;
+        var i = 1;
+        var d = confirm("작업을 진행할까요?");
+        
+        do{
+            if(d == true){
+            sum += i;
+            document.write(sum + ", " + i + "<br/>");
+            i++;
+            }
+            else{
+                break;
+            }
+        }while(i<=100)
+        document.write("1~" + (i-1) + "까지의 합" + sum);
+    </script>
+
+</body>
+</html>

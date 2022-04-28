@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 레이아웃</title>
+    <style>
+        /* flex 레이아웃을 위해 부모와 자식이 필요하다. */
+        .container {
+            background-color: powderblue;
+            display: flex;
+            /* 반대쪽으로 수평 정렬 */
+            flex-direction: row-reverse;
+            /* 원래위치로 수평 정렬 */
+            flex-direction: row;
+            /* 수직으로 정렬 */
+            flex-direction: column;
+            /* 수직 정렬 순서 변겅 */
+            flex-direction: column-reverse;
+            height: 200px;
+        }
+
+        .item {
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

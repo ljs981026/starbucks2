@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모 자식 선택자</title>
+    <style>
+        /* ul밑에 있는 모든 li만 선택  ul이 부모 li는 자식 */
+        ul li {
+            color: red;
+        }
+        /* lecture 바로밑에 있는 li */
+        #lecture > li {
+            border: 1px solid red;
+        }
+        /* ul, ol 둘다 선택 */
+        ul, ol {
+            background-color: powderblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol id="lecture">
+        <li>HTML</li>
+        <li>CSS
+            <ol>
+                <li>selector</li>
+                <li>declaration</li>
+            </ol>
+        </li>
+        <li>JavaScript</li>
+    </ol>
+</body>
+</html>

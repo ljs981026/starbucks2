@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 가변 포트를 적용할 글자 크깃값 / 적용할 요소를 감싸고 있는 요소의 글자 크깃값 */
+    #para {
+      font-size: 6em;
+    }
+
+    #para p {
+      font-size: 0.66666666666667em;
+      /* 64px / 96px */
+      /* 1em = 16px */
+    }
+
+    #para2 {
+      font-size: 5em;
+    }
+
+    #para2 p {
+      font-size: 5rem;
+    }
+
+    /* vw 단위를 적용할 글자 크깃값 * 브라우적의 너빗값 */
+    #para3 {
+      font-size: 5vw;
+    }
+
+    /* vh 단위를 적용할 글자 크깃값 * 브라우저의 높잇값 */
+    #para4 {
+      font-size: 5vh;
+    }
+
+    /* vmin: 브라우저의 너비와 높이 중 짧은 쪽을 기준으로 크기를 결정 */
+    /* vmax: 넓은 쪽을 기준으로 크기를 결정 */
+    #para4 {
+      font-size: 5vmin;
+    }
+  </style>
+</head>
+<body>
+  <div id="para">
+    가변적인 폰트1
+    <p>가변적인 폰트2</p>
+  </div>
+
+  <div id="para2">
+    rem 단위!
+    <p>rem 단위!</p>
+  </div>
+
+  <div id="para3">
+    vw 단위!
+  </div>
+
+  <div id="para4">
+    vh 단위!
+  </div>
+
+  <div id="para5">
+    vmin 단위!
+  </div>
+  <!-- 
+    1. 가로
+    2. 마진
+    3. 패딩
+    4. calc
+    5. rem
+    6. vw, vh, vmin, vmax
+    7. 100
+  -->
+</body>
+</html>

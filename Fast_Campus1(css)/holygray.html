@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeMap</title>
+  <link rel="icon" href="https://cdn-icons.flaticon.com/png/128/826/premium/826070.png?token=exp=1648774259~hmac=2c1c9b2dfdc93bfb9c0c20c72f21e9b9">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rock+3D&display=swap');
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      width: 800px;
+      flex-direction: column;
+      display: flex;
+      border: 1px solid gray;
+    }
+
+    header {
+      border-bottom: 1px solid gray;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Lobster', cursive;
+    }
+
+    footer {
+      border-top: 1px solid gray;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .section {
+      display: flex;
+    }
+
+    .section article {
+      border-right: 1px solid gray;
+    }
+
+    article > ul {
+      list-style: none;
+      
+    }
+
+    .section aside {
+      border-left: 1px solid gray;
+    }
+
+    article, aside {
+      flex-basis: 150px;
+      flex-shrink: 0;
+    }
+
+    main {
+      padding: 10px;
+      order: 1;
+    }
+
+    img {
+      width: 500px;
+    }
+
+    article {
+      order: 0;
+    }
+
+    aside {
+      order: 2;
+      position: relative;
+    }
+
+    aside #list {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      list-style: none;
+    }
+
+    #item1, #item2, #item3, #item4 {
+      /* flex-basis: 110px; */
+      border: 1px solid gray;
+      height: 110px;
+      width: 100px;
+      
+    }
+
+
+  </style>
+  <script></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      WeMap
+    </header>
+    <div class="section">
+      <article>
+        <ul>
+          <li><input type="button" value="맛집"></li><br/>
+          <li><input type="button" value="관광지"></li><br/>
+          <li><input type="button" value="숙소"></li>
+        </ul>
+      </article>
+      <main>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMDhfMTY5%2FMDAxNjQxNjA3ODI2MTk1.GgkOj1TpCC5atkIjtKx0qSZbU9qBU306aLtm_kBE8Qsg.4bIhx_aOjZLdwoV73FV3rOU8NC_WCrVf5us069EAmycg.JPEG.travelam%2Foutput_267665185.jpg&type=a340" alt="map">
+      </main>
+      <aside>
+        <ul id="list">
+          <li id="item1">1</li>
+          <li id="item2">2</li>
+          <li id="item3">3</li>
+          <li id="item4">4</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>
+      <a href="https://naver.com">naver</a>
+    </footer>
+  </div>
+</body>
+</html>

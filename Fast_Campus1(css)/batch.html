@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 300px;
+      background-color: royalblue;
+      position: relative;
+    }
+
+    .container .item {
+      border: 4px dashed red;
+      background-color: orange;
+      color: black;
+    }
+
+    .container .item:nth-child(1) {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container .item:nth-child(2) {
+      width: 140px;
+      height: 70px;
+      /* position: relative;
+      top: 30px;
+      left: 200px; */
+      position: absolute;
+      bottom: 30px;
+      right: 60px;
+    }
+
+    .container .item:nth-child(3) {
+      width: 70px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <!-- position: 요소의 위치 지정 기준
+        static(기준없음), relative(요소 자신을 기준), absolute(위치 상 부모 요소를 기준), fixed(뷰포트를 기준), sticky(스크롤 영역 기준)
+        top, bottom, left, right-->
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+</html>

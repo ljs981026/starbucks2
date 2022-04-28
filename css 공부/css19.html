@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute 포지션</title>
+    <style>
+        #parent, #other {
+            border: 5px solid tomato;
+            margin: 10px;
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
+        #me {
+            background-color: black;
+            color: white;
+            /* html의 좌표를 기준으로 위치 지정할 때 absolute */
+            /* 위치지정을 안할시 부모 요소의 위치를 기준으로 설정됨 */
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="parent">
+        parent
+        <div id="me">me</div>
+    </div>
+    
+</body>
+</html>

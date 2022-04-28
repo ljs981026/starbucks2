@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#box {
+  /* 요소의 가로/세로 auto:브라우저가 너비를 계산
+    단위: px,em,vw등 단위로 지정 */
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+span {
+  background-color: orange;
+}
+
+/* div {
+  background-color: orange;
+  width: 10px;
+  height: 10px;
+} */
+
+/* 요소가 커질 수 있는 최대 가로/세로 너비 
+    none: 최대 너비 제한 없음
+    단위: px,em,vw등 단위로 지정
+    요소가 작아 질 수 잇는 최소 가로/세로 너비
+    0: 최소 너비 제한 없음
+    단위: px,em,vw등 단위로 지정*/
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+.child {
+  /* max-width: 300px;
+  width: auto; */
+  min-width: 400px;
+  height: 100px;
+  background-color: orange;
+}
+

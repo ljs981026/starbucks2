@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 이미지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .arrBanner {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            border: 3px solid gray;
+        }
+
+        #arrBanner1 {
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var $arrBanner = $(".arrBanner");
+            var i = 0;
+            var imgList = ["canada","england","germany","italia","korea","spain","usa"];
+            setInterval(function(){
+                i++;
+                if(i > imgList.length) {
+                    i = 0;
+                }
+                // 이미지 이름을 배열에서 얻기
+                var imgName = imgList[i];
+                // 이미지 출력부분
+                $arrBanner.attr("src", "img/" + imgName + ".png");
+            }, 1000);
+
+        });
+    </script>
+</head>
+<body>
+    <img src="img/korea.png" class="arrBanner" id="arrBanner1">
+</body>
+</html>

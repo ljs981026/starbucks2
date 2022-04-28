@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading</title>
+    <style>
+        /* cascading 규칙 우선순위 */
+        li {
+            color: red;
+        }
+
+        #idsel {
+            color: blue;
+        }
+
+        .classsel {
+            color: green;
+        }
+
+        ol > li {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li id="idsel" class="classsel" style="color: powderblue">css</li>
+        <li>javascript</li>
+    </ul>
+    <ol>
+        <ul>선택자 우선 순위</ul>
+        <li>style attribute</li>
+        <li>id selector</li>
+        <li>class selector</li>
+        <li>tag selector</li>
+        <li>!important는 강제 우선순위 부여</li>
+    </ol>
+</body>
+</html>

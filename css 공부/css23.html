@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy gray layout</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            border: 1px solid gray;
+        }
+
+        header {
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+            /* text-align: center; */
+        }
+
+        footer {
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .content nav {
+            border-right: 1px solid gray;
+        }
+
+        .content aside {
+            border-left: 1px solid gray;
+        }
+
+        nav, aside {
+            flex-basis: 150px;
+            flex-shrink: 0;;
+        }
+
+        main {
+            padding: 10px;
+            order: 1;
+        }
+        nav {
+            order: 0;
+        }
+
+        aside {
+            order: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>생활코딩</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, deleniti illo cum illum aut facilis quae. Fugiat atque, unde quas pariatur harum a! Amet a ab, repudiandae magnam error natus!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi perferendis itaque illo quos voluptas ipsa dolorum praesentium, deleniti aut sapiente minus inventore laborum debitis quis modi dicta tempora doloremque! Saepe.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum aperiam culpa, eum saepe delectus, rem incidunt, odit deserunt reiciendis officia debitis eius. Dolor neque dolore facilis quis esse velit omnis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nam quia optio rerum eligendi doloremque quod ducimus id cupiditate minus vitae libero, sunt saepe quasi repellat impedit consequuntur, perferendis quidem?
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">홈페이지</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-family</title>
+    <style>
+        p {
+            font-size: 5rem;
+            /* 대체 폰트 지정 띄어쓰기가 있을시 큰 따옴표로 묶음 */
+            /* serif(글자 꾸밈), sans-serif(글자 꾸밈x), monospace(고정폭) */
+            font-family: arial, verdana, "Helvetica Neue", monospace;
+            font-weight: bold;
+            /* 자간 */
+            line-height: 5rem;
+            /* font 속성들을 한번에 사용 순서 지켜야함 */
+            font: bold 5rem/2 arial, verdana, "Helvetica Neue", serif;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        hello world<br>
+        hello world
+    </p>
+</body>
+</html>

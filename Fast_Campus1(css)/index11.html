@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 300px;
+      height: 200px;
+      background-color: royalblue;
+      font-size: 10px;
+    }
+
+    .child {
+      /* em은 폰트사이즈 기준 기본값은 16px */
+      /* rem은 폰트사이즈가 변경되어져도 기본값 16px 유지 */
+      /* 뷰포트의 절반 차지 50vw */
+      width: 50vw;
+      height: 100vh;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    px: 픽셀 
+    %: 상대적 백분율
+    em: 요소의 글꼴 크기
+    rem: 루트 요소의 글꼴 크기
+    vw: 뷰포트 가로 너비의 백분율
+    vh: 뷰포트 세로 너비의 백분율
+  -->
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>

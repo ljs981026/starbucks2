@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        #input {
+            width: 300px;
+        }
+
+        #output {
+            width: 600px;
+            height: 200px;
+            border: 2px solid red;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var $input = $("#input");
+            var $output = $("#output");
+
+            $("#confirm").click(function(){
+                var value = $input.val();
+
+                var result = ltrim(value);
+                $output.html(result);
+            });
+        });
+        function ltrim(str) {
+            if(str.length <= 0) {
+                return "";
+            }
+
+            var firstChar =str.charAt();
+            if(firstChar != " ") {
+                return str;
+            }
+
+            var index;
+            for(index = 1; index < str.length; index++) {
+                var ch = str.charAt(index)
+                if(ch != " ") {
+                    break;
+                }
+            }
+            var result = str.slice(index, str.length);
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="input">
+        <button id="confirm">확인</button>
+    </div>
+    <br>
+    <textarea id="output">실행결과</textarea>
+</body>
+</html>

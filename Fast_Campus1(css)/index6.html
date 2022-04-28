@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 전체 선택자 */
+    * {
+      color: blue;
+    }
+    /* 태그 선택자 */
+    li {
+      color: red;
+    }
+    /* 클래스 선택자 */
+    .orange {
+      color: green;
+    }
+    /* 아이디 선택자 */
+    #straw {
+      color: tomato;
+    }
+    /* 일치 선택자 태그선택자는 앞에 그 뒤에 클래스 아이디 선택자*/
+    span.orange {
+      color: yellow;
+    }
+    p#tomato {
+      color: white;
+    }
+    /* 자식 선택자 */
+    ul > .orange {
+      color: black;
+    }
+    /* 하위 선택자 */
+    div .orange {
+      color: purple;
+    }
+    /* 인접 형제 선택자 li에 있는 orange 클래스의 다음 요소*/
+    .orange + li {
+      color: aqua;
+    }
+    /* 일반 형제 선택자 */
+    .orange ~ li {
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>사과</li>
+      <li id="straw">딸기</li>
+      <li class="orange">오렌지</li>
+      <li>망고</li>
+      <li>바나나</li>
+    </ul>
+    <div>당근</div>
+    <p id="tomato">토마토</p>
+    <span class="orange">오렌지</span>
+  </div>
+</body>
+</html>

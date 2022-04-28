@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            border: 2px solid gray;
+        }
+
+        #fish {
+            position: absolute;
+            top: 120px;
+            left: 50px;
+        }
+
+        #bar {
+            position: absolute;
+            width: 500px;
+            height: 20px;
+            top: 190px;
+            left: 50px;
+            background-color: red;
+        }
+
+        #nav {
+            text-align: center;
+            width: 600px;
+            margin-top: 20px;
+        }
+
+        #btnStart, #btnStop {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        var $fish = null;
+        var timerID = 0;
+        var step = 50;
+
+        $(document).ready(function(){
+            init();
+            initEvent();
+        });
+
+        function init(){
+            $fish = $("#fish");
+        }
+
+        function initEvent(){
+            $("#btnStart").click(function(){
+                start();
+            });
+            $("#btnStop").click(function(){
+                stop();
+            });
+        }
+
+        function start(){
+            if(timerID == 0) {
+                timerID = setInterval(function(){
+                    moveFish();
+                }, 100)
+            }
+        }
+
+        function stop(){
+            clearInterval(timerID);
+            timerID = 0;
+        }
+
+        function moveFish(){
+            var x = $fish.position().left + step;
+            
+            if(x >= 430) {
+                $fish.attr("src", "images/fish2.png");
+                step = -50;
+            }
+
+            if(x < 50) {
+                $fish.attr("src", "images/fish1.png");
+                step = 50;
+            }
+
+            $fish.css("left", x);
+        }
+    </script>
+</head>
+<body>
+    <div id="panel">
+        <img src="images/fish1.png" id="fish">
+        <div id="bar"></div>
+    </div>
+    <div id="nav">
+        <button id="btnStart">시작</button>
+        <button id="btnStop">멈춤</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons.flaticon.com/png/128/2248/premium/2248315.png?token=exp=1649380387~hmac=da70c39eac85e3866bcc668ca0746935">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <title>우.소.영</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      justify-content: center;
+      top: 0;
+      bottom: 0;
+      /* margin: 0 auto; */
+      align-content: center;
+      width: 100%;
+      height: 150px;
+      background-color: antiquewhite;
+      position: fixed;
+    }
+
+    header h4 {
+      padding: 50px;
+      font-weight: 700;
+      font-size: 50px;
+    }
+
+    .main .content {
+      position: relative;
+      background-color: #fff;
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      border-radius: 5px;
+      margin-top: 150px;
+    }
+
+    .container .main .content .start {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: #000;
+      top: 120px;
+      left: 80px;
+      border-radius: 5px;
+    }
+
+    .container .main .content .end {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: #000;
+      top: 120px;
+      right: 80px;
+      border-radius: 5px;
+    }
+
+    .container .main .content .direction {
+      position: absolute;
+      top: 120px;
+      left: 230px;
+    }
+
+    .container .main .content .direction .material-icons{
+      font-size: 150px;
+      color: aqua;
+    }
+
+    .container header .sub-menu {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .container header .sub-menu ul.menu {
+      display: flex;
+    }
+
+    .container header .sub-menu ul.menu li {
+      position: relative;
+    }
+
+    .container header .sub-menu ul.menu li a {
+      font-size: 30px;
+      padding: 11px 16px;
+      display: block;
+      color: #656565;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h4>"우리들의 소중한 여행"</h4>
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">로그인</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">회원가입</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-menu">
+        <div class="item">
+          <div class="item__name">공지사항</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <li>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="content">
+        <div class="start"></div>
+        <div class="direction">
+          <div class="material-icons">arrow_right</div>
+        </div>
+        <div class="end"></div>
+        <div class="explain">
+          <ul class="list">
+            <!-- <h4>지역선택</h4> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+</body>
+</html>

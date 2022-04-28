@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주축 방향으로 다양하게 플렉스 아이템 배치</title>
+  <style>
+    #wrap {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 4px solid #000
+    }
+
+    #wrap div {
+      width: 20%;
+    }
+
+    #wrap div:first-child {
+      background-color: #eb4a24;
+    }
+
+    
+    #wrap div:nth-child(2) {
+      background-color: #1488c8;
+    }
+
+    
+    #wrap div:last-child {
+      background-color: #f7e041;
+    }
+
+    #box {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #item {
+      margin: 0 40px 0;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    const wrap = document.querySelectorAll('#wrap');
+    const btn1 = document.querySelector('.item1');
+    function justify_content1() {
+      document.getElementById("wrap").style.justifyContent="flex-start";
+    }
+    function justify_content2() {
+      document.getElementById("wrap").style.justifyContent="flex-end";
+    }
+    function justify_content3() {
+      document.getElementById("wrap").style.justifyContent="center";
+    }
+    function justify_content4() {
+      document.getElementById("wrap").style.justifyContent="space-between";
+    }
+    function justify_content5() {
+      document.getElementById("wrap").style.justifyContent="space-around";
+    }
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div></div><div></div><div></div>
+  </div>
+  <div id="box">
+    <button class="item1" id="item" onclick="justify_content1()">flex-start</button>
+    <button class="item2" id="item" onclick="justify_content2()">flex-end</button>
+    <button class="item3" id="item" onclick="justify_content3()">center</button>
+    <button class="item4" id="item" onclick="justify_content4()">space-between</button>
+    <button class="item5" id="item" onclick="justify_content5()">space-around</button>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 400px;
+      height: 300px;
+      /* height: 200px; */
+      background-color: royalblue;
+      display: flex;
+      /* flex-direction: row(행축 수평정렬), column(열축 수직정렬) */
+      /* flex-wrap: flex-items 묶음(줄바꿈) 여부 
+          no-wrap: 묶음 없음
+          wrap: 여러 줄로 묶음*/
+      /* justify-content: 주 축의 정렬 방법
+          flex-start: flex items를 시작점으로 정렬
+          flex-end: flex items를 끝점으로 정렬
+          center: flex items를 가운데 정렬
+          space-between: 각 flex item사이를 균등하게 정렬 
+          space-around: 각 flex item의 외부 여백을 균등하게 정렬*/
+      /* align-content: 교차 축의 여러 줄 정렬 방법
+          stretch: flex items를 시작점으로 정렬
+          flex-start, flex-end, center, space-between, space-around*/
+      /* align-items: 교차 축의 한 줄 정렬 방법
+          stretch: flex items를 교차 축으로 늘림
+          flex-start: flex items를 각 줄의 시작점으로 정렬
+          flex-end: flex items를 각 줄의 끝점으로 정렬
+          center: flex items를 각 줄의 가운데 정렬
+          baseline: flex items를 각 줄의 문자 기준선에 정렬 */
+      /* flex-wrap: wrap;
+      flex-direction: row; */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container .item {
+      /* order: flex item의 순서
+          0: 순서없음, 숫자가 작을수록 먼저 */
+      /* flex-grow: flex item의 증가 너비 비율 
+          0: 증가 비율 없음, 숫자: 증가 비율 */
+      /* flex-shrink: flex item의 감소 너비비율
+          1: flex container 너비에 따라 감소 비율 적용 
+          숫자: 감소 비율 */
+      /* flex-basis: flex item의 공간 배분 전 기본 너비
+          auto: 요소의 content 너비
+          단위: px,em,rem 등 단위로 지정 */
+      width: 100px;
+      height: 100px;
+      border: 3px dashed red;
+      background-color: orange;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    
+    .container .item:nth-child(3) {
+      flex-grow: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

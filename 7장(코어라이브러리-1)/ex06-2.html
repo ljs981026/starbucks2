@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #banner {
+            position: absolute;
+            width: 400px;
+            height: 250px;
+            border: 2px solid gray;
+            top: 150px;
+            left: 150px;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var imgList = ["canada.png", "england.png", "germany.png",
+            "italia.png", "korea.png", "spain.png", "usa.png"]
+
+            var index = 0;
+            var $banner = $("#banner");
+        });
+
+        setInterval(function(){
+            index++;
+            if(index >= imgList.length) {
+                index = 0;
+            }
+
+            var imgName = imgList[index];
+            $banner.attr("src", "images/" + imgName);
+        }, 1000);
+    </script>
+</head>
+<body>
+    <img src="images/korea.png" id="banner">
+</body>
+</html>
